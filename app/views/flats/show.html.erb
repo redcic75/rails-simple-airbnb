@@ -23,8 +23,9 @@
           </div>
         </div>
       </div>
-      <div class="zone">
-        <%= link_to "Edit flat", edit_flat_path(@flat) %>
+      <div class="zone flex">
+        <%= link_to "Edit", edit_flat_path(@flat), class: "orange" %>
+        <%= link_to "Remove", flat_path(@flat), method: :delete, class: "red" %>
       </div>
     </div>
     <div class="booking">

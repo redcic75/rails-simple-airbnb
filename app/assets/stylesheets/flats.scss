@@ -1,7 +1,7 @@
 // Place all the styles related to the Flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$grey: rgb(240, 240, 240);
+$grey: rgb(245, 245, 245);
 $dark: rgb(39, 39, 39);
 $link: #0275d8;
 $green: #5cb85c;
@@ -23,7 +23,7 @@ a {
 
 .container {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 2rem;
 }
 
 .flex {
@@ -34,7 +34,7 @@ a {
 
 .banner {
   background-color: $grey;
-  padding: 1.5rem;
+  padding: 1rem;
   > a {
     border: $link 1px solid;
     border-radius: 4px;
@@ -136,4 +136,12 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+.orange {
+  color: orange;
+}
+
+.red {
+  color: red;
 }

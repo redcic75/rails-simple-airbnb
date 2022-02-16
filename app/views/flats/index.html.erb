@@ -19,7 +19,8 @@
         </div>
         <div class="more flex">
           <%= link_to "More info", flat_path(flat) %>
-          <%= link_to "Edit flat", edit_flat_path(flat) %>
+          <%= link_to "Edit", edit_flat_path(flat), class: "orange" %>
+          <%= link_to "Remove", flat_path(flat), method: :delete, class: "red" %>
         </div>
       </div>
     <% end %>
