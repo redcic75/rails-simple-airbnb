@@ -5,18 +5,34 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js"></script>
+
     <script src="https://kit.fontawesome.com/8eeac54d23.js" crossorigin="anonymous"></script>
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <div class="banner flex">
-      <div class="logo">Simple Airbnb</div>
+      <div class="logo">
+        <%= link_to "Simple Airbnb", flats_path %>
+      </div>
       <%= link_to "Add Flat", new_flat_path %>
     </div>
-    <div class="container">
-      <%= yield %>
-    </div>
+
+    <%= yield %>
+
+    <script>
+      mapboxgl.accessToken = 'pk.eyJ1IjoicmVkY2ljIiwiYSI6ImNrejhiNnpmMjByc2gyd3Fta2ttYXdueDQifQ.gduDGEJzrGo4WL6fj5YtDA';
+      const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        style: 'mapbox://styles/mapbox/streets-v11', // style URL
+        center: [-74.5, 40], // starting position [lng, lat]
+        zoom: 9 // starting zoom
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,13 @@
+<%= form_for @flat do |f| %>
+  <%= f.label "Name" %>
+  <%= f.text_field :name %>
+  <%= f.label "Address" %>
+  <%= f.text_field :address %>
+  <%= f.label "Description" %>
+  <%= f.text_field :description %>
+  <%= f.label "Price per night" %>
+  <%= f.number_field :price_per_night %>
+  <%= f.label "Number of guests" %>
+  <%= f.number_field :number_of_guests %>
+  <%= f.submit %>
+<% end %>

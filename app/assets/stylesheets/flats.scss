@@ -1,18 +1,24 @@
 // Place all the styles related to the Flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
-$grey : rgb(240, 240, 240);
+$grey: rgb(240, 240, 240);
+$dark: rgb(39, 39, 39);
+$link: #0275d8;
+$green: #5cb85c;
 
 body {
   margin: 0;
 }
 
-h1, h2, p {
+h1, h2, h3, p, i {
   margin-top: 0;
+  color: $dark;
 }
 
 a {
   text-decoration: none;
+  cursor: pointer;
+  color: $link;
 }
 
 .container {
@@ -23,15 +29,25 @@ a {
 .flex {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .banner {
   background-color: $grey;
-  padding: 1rem;
+  padding: 1.5rem;
+  > a {
+    border: $link 1px solid;
+    border-radius: 4px;
+    padding: .5rem;
+  }
 }
 
 .logo {
   font-weight: bold;
+  font-size: 1.5rem;
+  a {
+    color: $dark;
+  }
 }
 
 .cards {
@@ -43,18 +59,81 @@ a {
 .card {
   border: 1px solid $grey;
   width: 250px;
-  box-shadow: 2px 2px 8px 0px $grey;
+  box-shadow: 2px 2px 8px 0px $dark;
   .main {
     background-color: $grey;
     height: 150px;
     padding: 0 1rem;
-    .details {
-      display: flex;
-      gap: 1em;
-    }
   }
   .more {
     padding: .5rem 1rem;
   }
+}
 
+.details {
+  display: flex;
+  gap: 1em;
+  padding-bottom: .5rem;
+}
+
+#map {
+  width: 100%;
+  // background-color: rgb(224, 181, 181);
+  height: 40vh;
+}
+
+.rel {
+  position: relative;
+}
+
+.columns {
+  display: flex;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  right: 0;
+  justify-content: space-between;
+}
+
+.info {
+  width: 60%;
+}
+
+.booking {
+  width: 35%;
+}
+
+.zone {
+  background-color: $grey;
+  border: 1px solid $grey;
+  box-shadow: 2px 2px 8px 0px $dark;
+  margin-bottom: 1rem;
+  padding: .5rem 1rem;
+  &.col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    span {
+      font-weight: bold;
+    }
+    ul {
+      display: flex;
+      gap: .2rem;
+      list-style-type: none;
+    }
+  }
+}
+
+button {
+  width: 100%;
+  background-color: $green;
+  border: none;
+  padding: .5rem;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+button:hover {
+  cursor: pointer;
 }

@@ -1,0 +1,48 @@
+<div id="map"></div>
+<div class="container rel">
+  <div class="columns">
+    <div class="info">
+      <div class="zone">
+        <h1><%= @flat.name %></h1>
+        <p><%= @flat.address %></p>
+      </div>
+      <div class="zone">
+        <h2>A bit more about this flat</h2>
+        <p><%= @flat.description %></p>
+      </div>
+      <div class="zone">
+        <h2>Details</h2>
+        <div class="details">
+          <div class="guests">
+            <i class="fa-solid fa-user-group"></i>
+            <%= @flat.number_of_guests %>
+          </div>
+          <div class="price">
+            <i class="fa-solid fa-euro-sign"></i>
+            <%= @flat.price_per_night %>
+          </div>
+        </div>
+      </div>
+      <div class="zone">
+        <%= link_to "Edit flat", edit_flat_path(@flat) %>
+      </div>
+    </div>
+    <div class="booking">
+      <div class="zone">
+        <h2>Book this place</h2>
+        <button>Book</button>
+      </div>
+      <div class="zone col">
+        <span>Share</span>
+        <div class="social">
+          <ul>
+            <li><i class="fa-brands fa-twitter-square"></i></li>
+            <li><i class="fa-brands fa-facebook-square"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
