@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://kit.fontawesome.com/8eeac54d23.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div class="banner flex">
+      <div class="logo">Simple Airbnb</div>
+      <%= link_to "Add Flat", new_flat_path %>
+    </div>
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
